@@ -1,0 +1,5 @@
+- C Variables,if-else,while 
+- Coding in linux kernel coding style
+- Betty Style encouraged
+- Always end with a new line
+- No error nor warnings 
