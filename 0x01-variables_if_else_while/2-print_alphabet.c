@@ -8,11 +8,12 @@
 int main(void)
 {
 	char lowercase_alphabets[26] = "abcdefghijklmnopqrstuvwxyz";
+	int i;
 
-	for (int i = 0; i < 26; i++)
+	for (i = 0; i < 26; i++)
 	{
 		putchar(lowercase_alphabets[i]);
 	}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
