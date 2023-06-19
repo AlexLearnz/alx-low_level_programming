@@ -22,6 +22,11 @@ int main(void)
 		putchar(',');
 		putchar(' ');
 		i++;
+		if (i == 57)
+		{
+			putchar(i);
+			break;
+		}
 	}
 	putchar('\n');
 	return (0);
