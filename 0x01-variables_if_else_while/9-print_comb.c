@@ -4,7 +4,10 @@
  * main - Entry point
  *
  * Expected output: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+ *
  * putchar(number)
+ *
+ * As long as the number is NOT 9:
  * putchar(',')
  * putchar(' ')
  *
@@ -19,14 +22,12 @@ int main(void)
 	while (i <= 57)
 	{
 		putchar(i);
-		putchar(',');
-		putchar(' ');
-		i++;
-		if (i == 57)
+		if (i != 57)
 		{
-			putchar(i);
-			break;
+			putchar(',');
+			putchar(' ');
 		}
+		i++;
 	}
 	putchar('\n');
 	return (0);
