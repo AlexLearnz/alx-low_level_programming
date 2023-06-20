@@ -3,10 +3,7 @@
 /**
  * main - Entry point
  * man ascii
- *
  * i=0-8, j=1-9
- * i > j -> 01 == 10; 09 == 90
- *
  * Return: 0 Always (Success)
  */
 int main(void)
