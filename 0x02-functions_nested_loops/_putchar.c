@@ -1,13 +1,14 @@
 #include <unistd.h>
 
 /**
- * Define funtion _putchar
- * Parameters char c
- * The function writes char c to standard output
- * Return: 1 (Success)
+ * _putchar - write a char to stdout
+ * @c: The char to be written
+ *
+ * Return: 1 char is written
  *
  */
-int _putchar (char c)
+int _putchar(char c)
 {
+
 	return (write(1, &c, 1));
 }
