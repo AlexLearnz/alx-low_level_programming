@@ -2,7 +2,7 @@
 
 /**
  * _isalpha - Checks for alphabetic char
- * @c - Char to be checked
+ * @c: Char to be checked
  *
  * if c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z'
  *
