@@ -9,24 +9,22 @@
  */
 void reverse_array(int *a, int n)
 {
-	int start = 0;
-	int end = n - 1;
-	int tmp;
+	/**
+	 * Using for loop ??
+	 * n == lengt of array
+	 * temp var for swapping
+	 * index(i) for position
+	 */
+	int i, temp;
 
-	while (start < end)
+	/* Until i < midpoint of array ... */
+	for (i = 0; i < n / 2; i++)
 	{
-		/* Swap */
-		tmp = a[start];
-		a[start] = a[end];
-		a[end] = tmp;
-
-		/* Move ptrs fwd and back one step */
-		start++;
-		end--;
+		/* Store first char in temp*/
+		temp = a[i];
+		/* Store last char in first char position*/
+		a[i] = a[n - 1 - i];
+		/* Store first char in last char position */
+		a[n - 1 - i] = temp;
 	}
 }
-
-
-
-
-
