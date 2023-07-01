@@ -9,4 +9,14 @@
  */
 int _strcmp(char *s1, char *s2)
 {
+	/* while s1 != null && char positions in s1 == s2, continue */
+	while ((*s1 != 0) && (*s1 == *s2))
+	{
+		/* Move pointers foward */
+		s1++;
+		s2++;
+	}
+	/* Return the difference */
+	return (*s1 - *s2);
+}
 
