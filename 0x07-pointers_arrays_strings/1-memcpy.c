@@ -10,10 +10,10 @@
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	int i;
+	int i, j;
 
-	/* Typecast n to ensure vars have the same signness */
-	for (i = 0; (int)n > i; i++)
+	j = n;
+	for (i = 0; j > i; i++)
 	{
 		dest[i] = src[i];
 		n--;
