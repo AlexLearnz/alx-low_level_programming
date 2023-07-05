@@ -18,19 +18,20 @@ unsigned int _strspn(char *s, char *accept)
 	/* Init a counter for matching char */
 	unsigned int count = 0;
 
-	while (*s >= 0)
+	/* Until null is encountered... != 0 */
+	while (*s)
 	{
-		while (*accept >= 0)
+		/* Init ptr to start of accept string */
+		char *a = accept;
+		while (*a)
 		{
-			if (*accept == 0)
-				return (count);
-			if (*s == *accept)
+			if (*s == *a)
 			{
 				count++;
 				break;
 			}
 			/* mv ptr */
-			accept++;
+			a++;
 		}
 		/* mv ptr */
 		s++;
