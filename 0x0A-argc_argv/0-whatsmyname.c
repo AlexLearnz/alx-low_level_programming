@@ -4,10 +4,9 @@
 
 /**
  * main - Entry point of the program
- * @argc - Integer argument counter
- * @argc - Array of char ptrs
- *
- * Description: Prints the name of the program
+ * To print the name of the program
+ * @argc: Integer argument counter
+ * @argv: Array of char ptrs
  *
  * Return: 0 (Success)
  */
