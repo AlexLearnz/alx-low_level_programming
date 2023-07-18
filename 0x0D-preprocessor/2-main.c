@@ -1,4 +1,4 @@
-#include "_putchar.c"
+#include <stdio.h>
 
 /**
  * main - program's entry point
@@ -7,14 +7,6 @@
  */
 int main(void)
 {
-	char filename[] = __FILE__;
-	int i = 0;
-
-	for (; filename[i]; i++)
-		_putchar(filename[i]);
-
-	_putchar(10);
-
+	printf("%s\n",__FILE__);
 	return (0);
 }
-
