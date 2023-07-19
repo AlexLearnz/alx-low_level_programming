@@ -8,7 +8,7 @@
 void print_dog(struct dog *d)
 {
 	if (!d)
-		printf("nothing");
+		return;
 
 	if (!(*d).name)
 		(*d).name = "(nil)";
