@@ -13,7 +13,7 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (name == 0)
+	if (name == 0 || f == 0)
 		return;
 	/* 'else' is not generally useful after 'break' or 'return' */
 	f(name);
