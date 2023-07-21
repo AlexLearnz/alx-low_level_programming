@@ -21,6 +21,7 @@ int sum_them_all(const unsigned int n, ...)
 	{
 		/* access current number from arglist then add it to sum */
 		unsigned int num = va_arg(arglist_ptr, unsigned int);
+
 		sum = sum + num;
 	}
 
