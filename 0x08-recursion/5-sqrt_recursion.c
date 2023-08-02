@@ -6,12 +6,13 @@
  * @low: lowest in range. Starts at 1
  * @high: Highest in range. The number itself
  *
+ *
  * Return: guess, found at midpoint or in the
  * first/second half of range of search
  */
 int _sqrt_binary(int n, int low, int high)
 {
-	int guess, mid, mid_sqred;
+	int mid;
 
 	/* Base: Invalid range */
 	if (low > high)
@@ -20,18 +21,17 @@ int _sqrt_binary(int n, int low, int high)
 	}
 
 	mid = (low + high) / 2;
-	mid_sqred = mid * mid;
 
-	/* Base: root found eg n = 4 */
-	if (mid_sqred == n)
-	guess = mid;
+	/* Base: root found */
+	if (mid == n / mid && (mid * mid == n))
+		return (mid);
 
-	if (mid_sqred < n)
-	guess = _sqrt_binary(n, mid + 1, high);
-	if (mid_sqred > n)
-	guess = _sqrt_binary(n, low, mid - 1);
+	if (mid < n / mid)
+		return (_sqrt_binary(n, mid + 1, high));
+	if (mid > n / mid)
+		return (_sqrt_binary(n, low, mid - 1));
 
-	return (guess);
+	return (-1);
 }
 
 /**
