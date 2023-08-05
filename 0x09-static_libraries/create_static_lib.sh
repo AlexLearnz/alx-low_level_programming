@@ -1,3 +1,4 @@
 #!/bin/bash
-gcc -Wall -Werror -Wextra -pedantic -c $(ls *.c | grep -v "main.c")
-ar rcs liball.a *.o
+gcc -c $(ls *.c | grep -v "main.c")
+ar rc liball.a *.o
+ranlib liball.a
