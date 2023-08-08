@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * alloc_grid - Creates a grid of 2-dimensiona
- * array of integers
- * @width: horizontal size of grid by columns
- * @height: Vertical size of grid by rows
+ * alloc_grid - Creates a 2 dimensional grid
+ * @width: width of grid
+ * @height: height o grid
  *
  * Return: ptr to grid, 0 otherwise
  */
@@ -18,7 +17,7 @@ int **alloc_grid(int width, int height)
 		return (0);
 	}
 
-	ptr = malloc(sizeof(int) * height);
+	ptr = malloc(sizeof(int *) * height);
 
 	if (ptr == NULL)
 	{
@@ -27,7 +26,7 @@ int **alloc_grid(int width, int height)
 
 	for (i = 0; i < height; i++)
 	{
-		ptr[i] = malloc(sizeof(int) * width);
+		ptr[i] = malloc(sizeof(int *) * width);
 
 		if (ptr[i] == NULL)
 		{
