@@ -8,5 +8,35 @@
  */
 char *_strdup(char *str)
 {
-	return ('\0');
+	/* ptr to new str, len and index */
+	char *ptr;
+	int len, i;
+
+	if (str == NULL)
+	{
+		return ('\0');
+	}
+
+	/* Find size/len of str */
+	len = 0;
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		len = len + 1;
+	}
+
+	/* Include NULL terminator */
+	ptr = malloc(sizeof(char) * (len + 1));
+
+	/* malloc failed? */
+	if (ptr == NULL)
+	{
+		return ('\0');
+	}
+
+	/* Dereferencing and value assignment */
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		*(ptr + i) = str[i];
+	}
+	return (ptr);
 }
