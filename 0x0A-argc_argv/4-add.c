@@ -19,8 +19,8 @@ int main(int argc, char *argv[])
 	sum = 0;
 	if (argc == 1)
 	{
-		printf("%d\n", sum);
-		return (1);
+		printf("%d\n", 0);
+		return (0);
 	}
 
 	i = 1;
