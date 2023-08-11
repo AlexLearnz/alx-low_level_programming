@@ -5,14 +5,21 @@
  * @b: Size of memory
  *
  * Return: ptr to allocated memory
- * Fail? - exit(98)
  */
 void *malloc_checked(unsigned int b)
 {
-	int *ptr = malloc(b);
+	void *ptr;
+
+	if (b == 0)
+	{
+		exit(98);
+	}
+
+	ptr = malloc(b);
 
 	if (ptr == NULL)
+	{
 		exit(98);
-
-	return(ptr);
+	}
+	return (ptr);
 }
