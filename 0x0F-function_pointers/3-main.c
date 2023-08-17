@@ -3,7 +3,8 @@
 /**
  * main - Entry to program
  * @argc: arg counter, number of arguments
- * @argv: arg vector, array of ptrs to args
+ * @argv: arg vector, array of ptrs to
+ * argument strings
  *
  * Return: 0 (Sucess)
  */
