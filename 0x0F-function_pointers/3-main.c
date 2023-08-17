@@ -22,7 +22,19 @@ int main(int argc, char *argv[])
 	sign = argv[2];
 	num2 = atoi(argv[3]);
 
-	/* Get op_function */
+	if (get_op_func(sign) == NULL || sign[1] != '\0')
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
+	if ((*sign == '/' && num2 == 0) || (*sign == '%' && num2 == 0))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
+	printf("%d\n", get_op_func(sign)(num1, num2));
 
 	return (0);
 }
