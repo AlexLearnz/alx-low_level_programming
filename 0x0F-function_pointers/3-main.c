@@ -1,7 +1,8 @@
 #include "3-calc.h"
 
 /**
- * main - Entry to program
+ * main - Entry to program...
+ * Calculator program using command line
  * @argc: arg counter, number of arguments
  * @argv: arg vector, array of ptrs to
  * argument strings
